@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D280Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">World Map</h1>
+    </header>    
+   <section>
+      <object data="assets/map.svg" id="map" alt="World Map"></object>
+      
+      <div>
+      <p id="direction">Hover over world map to get country data:</p>
+   
+      <table *ngIf="selectedCountry">
+        <tr>
+          <th>Country name:</th>
+          <td >{{selectedCountry.name}}</td>
+        </tr>
+        <tr>
+          <th>Capital:</th>
+          <td>{{selectedCountry.capitalCity}}</td>
+        </tr>
+        <tr>
+          <th>Region:</th>
+          <td>{{selectedCountry.region}}</td>
+        </tr>
+        <tr>
+          <th>Income level:</th>
+          <td>{{selectedCountry.incomeLevel}}</td>
+        </tr>
+        <tr>
+          <th>Longitude:</th>
+          <td>{{selectedCountry.longitude}}</td>
+        </tr>
+        <tr>
+          <th>Latitude:</th>
+          <td>{{selectedCountry.latitude}}</td>
+        </tr>
+      </table>
+      </div>
+
+      <p id="info">Information provided by <a id="link" target=_blank href="https://datahelpdesk.worldbank.org/knowledgebase/articles/898581-api-basic-call-structures">The World Bank</a></p>
+    </section>
+
+  </body>
+  
+</html>
+
